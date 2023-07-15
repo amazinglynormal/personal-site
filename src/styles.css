@@ -1,5 +1,11 @@
 :root {
   --max-width: 80rem;
+  --black: #0b0c10;
+  --smoke: #1f2833;
+  --smokey-black: #13171b;
+  --electric-blue: #66fcf1;
+  --cyan: #45a29e;
+  --grey: #c5c6c7;
 }
 
 * {
@@ -9,6 +15,26 @@
   margin: 0;
 }
 
+body {
+  background-color: var(--black);
+  color: var(--grey);
+}
+
+main {
+  max-width: var(--max-width);
+  background-color: var(--smokey);
+}
+
 h1 {
-  color: brown;
+  color: var(--electric-blue);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+footer {
+  max-width: var(--max-width);
+  background-color: var(--smokey-black);
 }
