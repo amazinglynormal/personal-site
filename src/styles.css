@@ -7,7 +7,7 @@
   );
   --bg-plain: rgb(24, 25, 26);
   --accent: rgb(211, 175, 55);
-  --accent-dark: rgb(227, 177, 48);
+  --accent-dark: rgb(187, 149, 23);
   --primary-text: #ffffff;
   --secondary-text: #aaaaaa;
   /* SPACING */
@@ -84,4 +84,14 @@ footer {
 .navbar-link:hover {
   border-color: var(--accent);
   color: var(--accent);
+}
+
+.button {
+  height: 3rem;
+  width: 6rem;
+  background-color: var(--accent);
+}
+
+.button:hover {
+  background-color: var(--accent-dark);
 }
