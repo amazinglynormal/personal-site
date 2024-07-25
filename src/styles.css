@@ -1,16 +1,37 @@
 :root {
-  --max-width: 80rem;
-  /* light-mode default */
-  --bg: #eae7dc;
-  --accent: #e85a4f;
-  --primary-text: #242424;
-  --secondary-text: #fff;
-  /* dark-mode */
-  --dm-bg: #161618;
-  --dm-accent: #86b9b0;
-  --dm-accent-hover: #4c7273;
-  --dm-primary-text: #faf9f6;
-  --dm-secondary-text: #aaaaaa;
+  /* COLOR */
+  --bg: linear-gradient(
+    93deg,
+    rgba(56, 59, 60, 1) 39%,
+    rgba(24, 25, 26, 1) 100%
+  );
+  --bg-plain: rgb(24, 25, 26);
+  --accent: rgb(211, 175, 55);
+  --accent-dark: rgb(227, 177, 48);
+  --primary-text: #ffffff;
+  --secondary-text: #aaaaaa;
+  /* SPACING */
+  --spacing-xxs: 0.25rem;
+  --spacing-xs: 0.5rem;
+  --spacing-s: 0.75rem;
+  --spacing-m: 1rem;
+  --spacing-l: 1.25rem;
+  --spacing-xl: 1.75rem;
+  --spacing-xxl: 2.5rem;
+  --spacing-3xl: 3.75rem;
+  /* FONTS & LINE HEIGHT */
+  --font-s: 0.875rem;
+  --font-std: 1rem;
+  --font-l: 1.25rem;
+  --font-xl: 2rem;
+  --font-xxl: 3.25rem;
+  --lh-s: 1.25rem;
+  --lh-std: 1.5rem;
+  --lh-l: 1.75rem;
+  --lh-xl: 2.25rem;
+  --lh-xxl: 1rem;
+  /* MISC */
+  --max-width: 75rem;
 }
 
 * {
@@ -21,7 +42,8 @@
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--bg);
+  background: var(--bg-plain);
+  background: var(--bg);
 }
 
 .shadow {
@@ -49,7 +71,7 @@ footer {
 
 .navbar-link {
   font-size: 1.25rem;
-  color: var(--primary-text);
+  color: var(--secondary-text);
   text-decoration: none;
   padding: 0.25rem 0.5rem;
   margin: 0 1rem;
