@@ -19,17 +19,13 @@
   --spacing-xl: 1.75rem;
   --spacing-xxl: 2.5rem;
   --spacing-3xl: 3.75rem;
-  /* FONTS & LINE HEIGHT */
-  --font-s: 0.875rem;
-  --font-std: 1rem;
-  --font-l: 1.25rem;
-  --font-xl: 2rem;
-  --font-xxl: 3.25rem;
-  --lh-s: 1.25rem;
-  --lh-std: 1.5rem;
-  --lh-l: 1.75rem;
-  --lh-xl: 2.25rem;
-  --lh-xxl: 1rem;
+  /* FONTS */
+  --sans-serif: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --font-s: 0.875rem/1.25 var(--sans-serif);
+  --font-std: 1rem/1.5 var(--sans-serif);
+  --font-l: 1.25rem/1.75 var(--sans-serif);
+  --font-xl: bold 2rem/2.25 var(--sans-serif);
+  --font-xxl: bold 3.25rem/1 var(--sans-serif);
   /* MISC */
   --max-width: 75rem;
 }
@@ -41,7 +37,7 @@
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--sans-serif);
   background: var(--bg-plain);
   background: var(--bg);
 }
@@ -86,12 +82,12 @@ footer {
   color: var(--accent);
 }
 
-.button {
-  height: 3rem;
-  width: 6rem;
-  background-color: var(--accent);
+.landing-page-heading {
+  font: var(--font-xxl);
+  color: var(--primary-text);
 }
 
-.button:hover {
-  background-color: var(--accent-dark);
+.landing-page-heading .line-break::before {
+  content: "\a";
+  white-space: pre;
 }
