@@ -1,13 +1,9 @@
 :root {
   /* COLOR */
-  --bg: linear-gradient(
-    93deg,
-    rgba(56, 59, 60, 1) 39%,
-    rgba(24, 25, 26, 1) 100%
-  );
-  --bg-plain: rgb(24, 25, 26);
-  --accent: rgb(211, 175, 55);
-  --accent-dark: rgb(187, 149, 23);
+  --bg: linear-gradient(to right, #232525 38%, #18191a);
+  --bg-base: #232525;
+  --accent: #d3af37;
+  --accent-dark: #bb9517;
   --primary-text: #ffffff;
   --secondary-text: #aaaaaa;
   /* SPACING */
@@ -20,6 +16,7 @@
   --spacing-xxl: 2.5rem;
   --spacing-3xl: 3.75rem;
   /* FONTS */
+  --IBM-Plex-Mono: "IBM Plex Mono", monospace;
   --sans-serif: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   --font-s: 0.875rem/1.25 var(--sans-serif);
   --font-std: 1rem/1.5 var(--sans-serif);
@@ -28,6 +25,7 @@
   --font-xxl: bold 3.25rem/1 var(--sans-serif);
   /* MISC */
   --max-width: 75rem;
+  --border-radius: 25px;
 }
 
 * {
@@ -37,17 +35,10 @@
 }
 
 body {
-  font-family: var(--sans-serif);
-  background: var(--bg-plain);
+  font-family: var(--IBM-Plex-Mono);
+  background: var(--bg-base);
   background: var(--bg);
-}
-
-.shadow {
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-}
-
-.shadow-click {
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  color: var(--secondary-text);
 }
 
 header,
@@ -55,39 +46,127 @@ main,
 footer {
   max-width: var(--max-width);
   margin: 0 auto;
+  padding-top: 1rem;
 }
 
 .navbar {
+  max-width: 20rem;
+  background-color: #27272ae6;
+  margin: 0 auto;
   height: 3rem;
+  border: 1px solid #363636;
+  border-radius: var(--border-radius);
   display: flex;
   align-items: center;
-  justify-content: center;
-  border-bottom: 1px solid var(--dm-secondary-text);
+  justify-content: space-around;
 }
 
 .navbar-link {
-  font-size: 1.25rem;
   color: var(--secondary-text);
   text-decoration: none;
-  padding: 0.25rem 0.5rem;
-  margin: 0 1rem;
   height: 100%;
-  border-bottom: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid transparent;
+  padding: 0 0.8rem;
+  font-weight: bold;
+}
+
+.navbar-link:hover {
+  color: var(--accent);
+}
+
+/* LANDING PAGE */
+
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.landing-page__main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--spacing-xl);
+}
+
+.landing-page__heading {
+  color: var(--primary-text);
+  font-weight: 400;
+  font-size: 3rem;
+}
+
+.landing-page__intro {
+  max-width: 40rem;
+  line-height: 1.75;
+  margin: var(--spacing-xxl) 0;
+}
+
+.landing-page__cta-link {
+  padding: var(--spacing-m) var(--spacing-xl);
+  color: var(--primary-text);
+  text-decoration: none;
+  border: 1px solid var(--primary-text);
+  border-radius: var(--border-radius);
+  background-color: #232525;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.landing-page__cta-link::before,
+.landing-page__cta-link::after {
+  content: "";
+  position: absolute;
+  inset: -0.15rem;
+  z-index: -1;
+  background: conic-gradient(
+    from var(--gradient-angle),
+    var(--primary-text),
+    var(--secondary-text),
+    var(--primary-text),
+    var(--secondary-text),
+    var(--primary-text)
+  );
+  border-radius: inherit;
+  animation: rotation 2s linear infinite;
+}
+
+.landing-page__cta-link:hover {
+  color: var(--bg-base);
+  background-color: var(--accent);
+  border-color: var(--accent);
+}
+
+.landing-page__cta-link:hover::before,
+.landing-page__cta-link:hover::after {
+  background: conic-gradient(
+    from var(--gradient-angle),
+    var(--accent),
+    var(--accent-dark),
+    var(--accent),
+    var(--accent-dark),
+    var(--accent)
+  );
+}
+
+.landing-page__cta-link::after {
+  filter: blur(0.5rem);
+}
+
+.landing-page__cta-link > span {
+  margin-left: var(--spacing-xxs);
+  width: var(--spacing-xxl);
   display: flex;
   align-items: center;
 }
 
-.navbar-link:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-}
-
-.landing-page-heading {
-  font: var(--font-xxl);
-  color: var(--primary-text);
-}
-
-.landing-page-heading .line-break::before {
-  content: "\a";
-  white-space: pre;
+@keyframes rotation {
+  0% {
+    --gradient-angle: 0deg;
+  }
+  100% {
+    --gradient-angle: 360deg;
+  }
 }
