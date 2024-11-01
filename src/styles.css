@@ -1,172 +1,75 @@
 :root {
-  /* COLOR */
-  --bg: linear-gradient(to right, #232525 38%, #18191a);
-  --bg-base: #232525;
-  --accent: #d3af37;
-  --accent-dark: #bb9517;
-  --primary-text: #ffffff;
-  --secondary-text: #aaaaaa;
-  /* SPACING */
-  --spacing-xxs: 0.25rem;
-  --spacing-xs: 0.5rem;
-  --spacing-s: 0.75rem;
-  --spacing-m: 1rem;
-  --spacing-l: 1.25rem;
-  --spacing-xl: 1.75rem;
-  --spacing-xxl: 2.5rem;
-  --spacing-3xl: 3.75rem;
-  /* FONTS */
-  --IBM-Plex-Mono: "IBM Plex Mono", monospace;
-  --sans-serif: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  --font-s: 0.875rem/1.25 var(--sans-serif);
-  --font-std: 1rem/1.5 var(--sans-serif);
-  --font-l: 1.25rem/1.75 var(--sans-serif);
-  --font-xl: bold 2rem/2.25 var(--sans-serif);
-  --font-xxl: bold 3.25rem/1 var(--sans-serif);
-  /* MISC */
-  --max-width: 75rem;
-  --border-radius: 25px;
+  --content-bg: #fafafa;
+  --bg: #ffffff;
+  --primary: #27272a;
+  --secondary: #52525b;
 }
 
-* {
+@media (prefers-color-scheme: dark) {
+  :root {
+    --content-bg: #18181b;
+    --bg: #0a0a0a;
+    --primary: #f4f4f5;
+    --secondary: #a1a1aa;
+  }
+}
+
+/* RESETS */
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
 body {
-  font-family: var(--IBM-Plex-Mono);
-  background: var(--bg-base);
-  background: var(--bg);
-  color: var(--secondary-text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
-header,
-main,
-footer {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding-top: 1rem;
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
 }
 
-.navbar {
-  max-width: 20rem;
-  background-color: #27272ae6;
-  margin: 0 auto;
-  height: 3rem;
-  border: 1px solid #363636;
-  border-radius: var(--border-radius);
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
 
-.navbar-link {
-  color: var(--secondary-text);
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+a {
   text-decoration: none;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid transparent;
-  padding: 0 0.8rem;
-  font-weight: bold;
 }
 
-.navbar-link:hover {
-  color: var(--accent);
-}
-
-/* LANDING PAGE */
-
-@property --gradient-angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
-
-.landing-page__main-content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: var(--spacing-xl);
-}
-
-.landing-page__heading {
-  color: var(--primary-text);
-  font-weight: 400;
-  font-size: 3rem;
-}
-
-.landing-page__intro {
-  max-width: 40rem;
-  line-height: 1.75;
-  margin: var(--spacing-xxl) 0;
-}
-
-.landing-page__cta-link {
-  padding: var(--spacing-m) var(--spacing-xl);
-  color: var(--primary-text);
-  text-decoration: none;
-  border: 1px solid var(--primary-text);
-  border-radius: var(--border-radius);
-  background-color: #232525;
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-.landing-page__cta-link::before,
-.landing-page__cta-link::after {
-  content: "";
-  position: absolute;
-  inset: -0.15rem;
-  z-index: -1;
-  background: conic-gradient(
-    from var(--gradient-angle),
-    var(--primary-text),
-    var(--secondary-text),
-    var(--primary-text),
-    var(--secondary-text),
-    var(--primary-text)
-  );
-  border-radius: inherit;
-  animation: rotation 2s linear infinite;
-}
-
-.landing-page__cta-link:hover {
-  color: var(--bg-base);
-  background-color: var(--accent);
-  border-color: var(--accent);
-}
-
-.landing-page__cta-link:hover::before,
-.landing-page__cta-link:hover::after {
-  background: conic-gradient(
-    from var(--gradient-angle),
-    var(--accent),
-    var(--accent-dark),
-    var(--accent),
-    var(--accent-dark),
-    var(--accent)
-  );
-}
-
-.landing-page__cta-link::after {
-  filter: blur(0.5rem);
-}
-
-.landing-page__cta-link > span {
-  margin-left: var(--spacing-xxs);
-  width: var(--spacing-xxl);
-  display: flex;
-  align-items: center;
-}
-
-@keyframes rotation {
-  0% {
-    --gradient-angle: 0deg;
-  }
-  100% {
-    --gradient-angle: 360deg;
-  }
+body {
+  background-color: var(--bg);
 }
