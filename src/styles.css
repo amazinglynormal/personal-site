@@ -1,8 +1,13 @@
 :root {
+  /* COLORS */
   --content-bg: #fafafa;
   --bg: #ffffff;
   --primary: #27272a;
   --secondary: #52525b;
+
+  /* FONTS */
+  --font: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,9 +27,15 @@
   box-sizing: border-box;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  font-family: var(--font);
 }
 
 img,
@@ -72,4 +83,27 @@ a {
 
 body {
   background-color: var(--bg);
+}
+
+.navbar {
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5rem;
+  padding: 0 2rem;
+}
+
+.navbar__navlist {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.navbar__link {
+  color: white;
+  padding: 0.5rem 1rem;
+  margin: 0 1rem;
+  border-radius: 5px;
+  border: 1px solid white;
 }
