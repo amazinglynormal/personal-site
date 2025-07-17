@@ -1,25 +1,26 @@
 {
-  "name": "personal-site",
-  "version": "1.0.0",
-  "description": "My personal website - stephenbrady.io",
-  "main": "index.js",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/amazinglynormal/personal-site.git"
-  },
-  "author": "Stephen Brady",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/amazinglynormal/personal-site/issues"
-  },
-  "homepage": "https://github.com/amazinglynormal/personal-site#readme",
-  "devDependencies": {
-    "vite": "^6.3.5"
-  }
+    "name": "personal-site",
+    "version": "1.0.0",
+    "description": "My personal website - stephenbrady.io",
+    "main": "index.js",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/amazinglynormal/personal-site.git"
+    },
+    "author": "Stephen Brady",
+    "license": "ISC",
+    "type": "commonjs",
+    "bugs": {
+        "url": "https://github.com/amazinglynormal/personal-site/issues"
+    },
+    "homepage": "https://github.com/amazinglynormal/personal-site#readme",
+    "devDependencies": {
+        "prettier": "^3.6.2",
+        "vite": "^6.3.5"
+    }
 }
