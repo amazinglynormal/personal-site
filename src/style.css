@@ -13,6 +13,9 @@
     --warning: oklch(0.7 0.05 100);
     --success: oklch(0.7 0.05 160);
     --info: oklch(0.7 0.05 260);
+    --system-ui:
+        system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 @media (prefers-color-scheme: light) {
@@ -49,6 +52,7 @@
 body {
     line-height: 1.5;
     min-height: 100vh;
+    font-family: var(--system-ui);
 }
 
 img,
@@ -65,4 +69,9 @@ button,
 textarea,
 select {
     font: inherit;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text);
 }
