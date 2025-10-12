@@ -1,4 +1,39 @@
-/* RESET */
+:root {
+    --bg-dark: oklch(0.1 0.01 230);
+    --bg: oklch(0.15 0.01 230);
+    --bg-light: oklch(0.2 0.01 230);
+    --text: oklch(0.96 0.02 230);
+    --text-muted: oklch(0.76 0.02 230);
+    --highlight: oklch(0.5 0.02 230);
+    --border: oklch(0.4 0.02 230);
+    --border-muted: oklch(0.3 0.02 230);
+    --primary: oklch(0.76 0.1 230);
+    --secondary: oklch(0.76 0.1 50);
+    --danger: oklch(0.7 0.05 30);
+    --warning: oklch(0.7 0.05 100);
+    --success: oklch(0.7 0.05 160);
+    --info: oklch(0.7 0.05 260);
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg-dark: oklch(0.92 0.01 230);
+        --bg: oklch(0.96 0.01 230);
+        --bg-light: oklch(1 0.01 230);
+        --text: oklch(0.15 0.02 230);
+        --text-muted: oklch(0.4 0.02 230);
+        --highlight: oklch(1 0.02 230);
+        --border: oklch(0.6 0.02 230);
+        --border-muted: oklch(0.7 0.02 230);
+        --primary: oklch(0.4 0.1 230);
+        --secondary: oklch(0.4 0.1 50);
+        --danger: oklch(0.5 0.05 30);
+        --warning: oklch(0.5 0.05 100);
+        --success: oklch(0.5 0.05 160);
+        --info: oklch(0.5 0.05 260);
+    }
+}
+
 *,
 *::before,
 *::after {
