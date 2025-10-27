@@ -11,26 +11,57 @@
         <h1>Projects Page</h1>
         <section>
             <article class="card">
-                <header class="card__header">Project Title</header>
-                <main>
-                    <p class="card__description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Nunc mi metus, tempor eget porta et, condimentum non
-                        lectus. Nullam quis sem est. Sed auctor gravida metus,
-                        sit amet porta dolor.
-                    </p>
-                    <div class="card__tech-used">
-                        <span class="card__tech-badge">Typescript</span>
-                        <span class="card__tech-badge">NextJS</span>
-                        <span class="card__tech-badge">Postgres</span>
-                    </div>
-                </main>
-                <footer>
-                    <nav>
-                        <a href="#" class="card__link">Link 1</a>
-                        <a href="#" class="card__link">Link 2</a>
-                    </nav>
-                </footer>
+                <div class="card__picture"></div>
+                <div class="card__info-container">
+                    <header class="card__header">Project Title</header>
+                    <main>
+                        <p class="card__description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Nunc mi metus, tempor eget porta et, condimentum non
+                            lectus. Nullam quis sem est. Sed auctor gravida metus,
+                            sit amet porta dolor.
+                        </p>
+                        <div class="card__tech-used">
+                            <span class="card__tech-badge">Typescript</span>
+                            <span class="card__tech-badge">NextJS</span>
+                            <span class="card__tech-badge">Postgres</span>
+                        </div>
+                    </main>
+                    <footer>
+                        <nav class="card__links-container">
+                            <a href="#" class="card__link">
+                                Repo
+                                <svg xmlns="http://www.w3.org/2000/svg" 
+                                    viewBox="0 0 24 24" 
+                                    fill="none" 
+                                    stroke="#ffffff" 
+                                    stroke-width="2" 
+                                    stroke-linecap="round" 
+                                    stroke-linejoin="round" 
+                                    class="card__link-svg">
+                                    <path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"/>
+                                    <path d="m21 3-9 9"/>
+                                    <path d="M15 3h6v6"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="card__link">
+                                Live site
+                                <svg xmlns="http://www.w3.org/2000/svg" 
+                                    viewBox="0 0 24 24" 
+                                    fill="none" 
+                                    stroke="#ffffff" 
+                                    stroke-width="2" 
+                                    stroke-linecap="round" 
+                                    stroke-linejoin="round" 
+                                    class="card__link-svg">
+                                    <path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"/>
+                                    <path d="m21 3-9 9"/>
+                                    <path d="M15 3h6v6"/>
+                                </svg>
+                            </a>
+                        </nav>
+                    </footer>
+                </div>
             </article>
         </section>
     </body>

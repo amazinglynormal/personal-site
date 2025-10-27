@@ -75,3 +75,79 @@ body {
     background-color: var(--bg-dark);
     color: var(--text);
 }
+
+h1 {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+    padding: 0 1rem;
+}
+
+section {
+    padding: 1rem;
+}
+
+.card {
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    background-color: var(--bg);
+    overflow: hidden;
+    max-width: 48rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.card__picture {
+    height: 200px;
+    width: 100%;
+    background-color: sandybrown;
+}
+
+.card__info-container {
+    padding: 1rem;
+}
+
+.card__header {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0.5rem 0;
+}
+
+.card__description {
+    color: var(--text-muted);
+    margin: 1rem 0;
+}
+
+.card__tech-used {
+    margin: 1.5rem 0;
+}
+
+.card__tech-badge {
+    border: 1px solid var(--border);
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    color: var(--text-muted);
+}
+
+.card__links-container {
+    display: flex;
+    justify-content: end;
+}
+
+.card__link {
+    color: var(--text);
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    text-underline-offset: 2px;
+    border: 1px solid var(--border);
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+    background-color: var(--bg-light);
+}
+
+.card__link-svg {
+    color: var(--text);
+    height: 16px;
+    width: 16px;
+    margin-left: 0.25rem;
+}
