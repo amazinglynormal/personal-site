@@ -86,14 +86,21 @@ section {
     padding: 1rem;
 }
 
+.project-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
 .card {
     border: 1px solid var(--border);
     border-radius: 1rem;
     background-color: var(--bg);
     overflow: hidden;
-    max-width: 48rem;
+    max-width: 40rem;
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
 }
 
 .card__picture {
@@ -119,6 +126,8 @@ section {
 
 .card__tech-used {
     margin: 1.5rem 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .card__tech-badge {
@@ -126,16 +135,26 @@ section {
     padding: 0.25rem 0.75rem;
     border-radius: 1rem;
     color: var(--text-muted);
+    margin: 0.25rem;
+    display: flex;
+    align-items: center;
+}
+
+.tech-badge-svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.15rem;
 }
 
 .card__links-container {
     display: flex;
     justify-content: end;
+    margin-top: 1rem;
 }
 
 .card__link {
     color: var(--text);
-    margin-right: 1rem;
+    margin-left: 1rem;
     display: flex;
     align-items: center;
     text-underline-offset: 2px;
@@ -150,4 +169,15 @@ section {
     height: 16px;
     width: 16px;
     margin-left: 0.25rem;
+}
+
+@media (min-width: 1024px) {
+    .card {
+        flex-direction: row;
+        max-width: 48rem;
+    }
+
+    .card__picture {
+        height: 100%;
+    }
 }
