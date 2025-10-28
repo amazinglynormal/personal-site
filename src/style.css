@@ -1,7 +1,7 @@
 :root {
-    --bg-dark: oklch(0.1 0.01 230);
-    --bg: oklch(0.15 0.01 230);
-    --bg-light: oklch(0.2 0.01 230);
+    --bg-dark: oklch(0.1 0 264);
+    --bg: oklch(0.2 0 264);
+    --bg-light: oklch(0.3 0 264);
     --text: oklch(0.96 0.02 230);
     --text-muted: oklch(0.76 0.02 230);
     --highlight: oklch(0.5 0.02 230);
@@ -16,13 +16,22 @@
     --system-ui:
         system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
         "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --shadow-s:
+        inset 0 1px 2px #ffffff30, /* top highlight */ 0 1px 2px #00000030,
+        /* dark shadow */ 0 2px 4px #00000015; /* soft shadow */
+    --shadow-m:
+        inset 0 1px 2px #ffffff50, /* top highlight */ 0 2px 4px #00000030,
+        /* dark shadow */ 0 4px 8px #00000015; /* soft shadow */
+    --shadow-l:
+        inset 0 1px 2px #ffffff70, /* top highlight */ 0 4px 6px #00000030,
+        /* dark shadow */ 0 6px 10px #00000015; /* soft shadow */
 }
 
 @media (prefers-color-scheme: light) {
     :root {
-        --bg-dark: oklch(0.92 0.01 230);
-        --bg: oklch(0.96 0.01 230);
-        --bg-light: oklch(1 0.01 230);
+        --bg-dark: oklch(0.92 0 264);
+        --bg: oklch(0.96 0 264);
+        --bg-light: oklch(1 0 264);
         --text: oklch(0.15 0.02 230);
         --text-muted: oklch(0.4 0.02 230);
         --highlight: oklch(1 0.02 230);
@@ -86,6 +95,39 @@ section {
     padding: 1rem;
 }
 
+.navbar {
+    margin: 1rem 0;
+    padding: 0.5rem 1.5rem;
+}
+
+.navbar > ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0.3rem 1rem;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 1rem;
+    border: 1px solid var(--border);
+    background-color: var(--bg);
+    margin: 0 auto;
+    box-shadow: var(--shadow-s);
+}
+
+.nav-link {
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    margin: 0 0.1rem;
+    color: var(--text-muted);
+}
+
+.nav-link:hover {
+    color: var(--text);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.25rem;
+}
+
 .project-cards {
     display: grid;
     grid-template-columns: 1fr;
@@ -101,6 +143,7 @@ section {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+    box-shadow: var(--shadow-s);
 }
 
 .card__picture {
@@ -157,11 +200,16 @@ section {
     margin-left: 1rem;
     display: flex;
     align-items: center;
-    text-underline-offset: 2px;
     border: 1px solid var(--border);
-    padding: 0.25rem 0.75rem;
+    text-decoration: none;
+    padding: 0.25rem 1rem;
     border-radius: 0.5rem;
     background-color: var(--bg-light);
+    box-shadow: var(--shadow-s);
+}
+
+.card__link:hover {
+    box-shadow: var(--shadow-m);
 }
 
 .card__link-svg {
