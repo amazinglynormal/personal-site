@@ -7,7 +7,7 @@
     --highlight: oklch(0.5 0.02 230);
     --border: oklch(0.4 0.02 230);
     --border-muted: oklch(0.3 0.02 230);
-    --primary: oklch(0.76 0.1 230);
+    --primary: oklch(82.8% 0.189 84.429);
     --secondary: oklch(0.76 0.1 50);
     --danger: oklch(0.7 0.05 30);
     --warning: oklch(0.7 0.05 100);
@@ -127,10 +127,27 @@ section {
 }
 
 .nav-link:hover {
-    color: var(--text);
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 0.25rem;
+    color: var(--primary);
+}
+
+a:has(> .navbar-underline) {
+    position: relative;
+    color: var(--primary);
+}
+
+.navbar-underline {
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    margin: 0 auto;
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--primary),
+        transparent
+    );
+    bottom: 0px;
+    left: 0px;
 }
 
 .project-cards {
