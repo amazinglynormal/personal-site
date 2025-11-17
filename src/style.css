@@ -44,6 +44,24 @@
         --success: oklch(0.5 0.05 160);
         --info: oklch(0.5 0.05 260);
     }
+
+    .dark-mode {
+        display: none;
+    }
+
+    .light-mode {
+        display: block;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .dark-mode {
+        display: hidden;
+    }
+
+    .light-mode {
+        display: none;
+    }
 }
 
 *,
@@ -135,9 +153,30 @@ section {
     padding: 1rem;
 }
 
+.svg-base {
+    width: 30px;
+    height: 30px;
+}
+
+.svg-base:hover {
+    transform: scale(1.1);
+}
+
+.page-header {
+    display: flex;
+    align-items: center;
+}
+
+.github-link-container {
+    width: 5%;
+    display: flex;
+    justify-content: center;
+}
+
 .navbar {
     margin: 1rem 0;
     padding: 0.5rem 1.5rem;
+    width: 85%;
 }
 
 .navbar > ul {
