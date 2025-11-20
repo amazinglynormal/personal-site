@@ -9,17 +9,50 @@
     </head>
     <body>
         <header class="page-header">
-            <nav class="navbar">
+            <button class="mobile-menu__button mobile-menu__button-open">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mobile-menu__button-svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+            <nav class="desktop-navbar">
                 <ul>
-                    <li><a href="/home" class="nav-link">Home</a></li>
                     <li>
-                        <a href="/projects" class="nav-link current"
-                            >Projects<span class="navbar-underline"></span
-                        ></a>
+                        <a href="/home" class="nav-link current"
+                            >Home
+
+                        </a>
                     </li>
-                    <li><a href="/about" class="nav-link current">About</a></li>
+                    <li><a href="/projects" class="nav-link">Projects
+
+                            <span class="navbar-underline"></span>
+                    </a></li>
+                    <li><a href="/about" class="nav-link">About</a></li>
                 </ul>
             </nav>
+            <div class="mobile-menu__overlay">
+                <div class="mobile-menu__drawer">
+                    <div class="mobile-menu__drawer-close-button-container">
+                        <button class="mobile-menu__button mobile-menu__button-close">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mobile-menu__button-svg">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    <nav class="mobile-navbar">
+                        <ul>
+                            <li>
+                                <a href="/home" class="nav-link current"
+                                    >Home</a>
+                            </li>
+                            <li><a href="/projects" class="nav-link">Projects
+
+                            <span class="navbar-underline"></span>
+                            </a></li>
+                            <li><a href="/about" class="nav-link">About</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </header>
         <main class="main-container">
             <h1>Projects Page</h1>
