@@ -44,24 +44,6 @@
         --success: oklch(0.5 0.05 160);
         --info: oklch(0.5 0.05 260);
     }
-
-    .dark-mode {
-        display: none;
-    }
-
-    .light-mode {
-        display: block;
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    .dark-mode {
-        display: hidden;
-    }
-
-    .light-mode {
-        display: none;
-    }
 }
 
 *,
@@ -171,8 +153,6 @@ section {
     z-index: 5;
     padding: 0.5rem 1rem;
     width: 100vw;
-    display: flex;
-    justify-content: end;
 }
 
 .desktop-navbar {
@@ -203,7 +183,12 @@ section {
     margin: 2rem 0;
 }
 
-@container page-header (width < 768px) {
+@media (max-width: 768px) {
+    .page-header {
+        display: flex;
+        justify-content: end;
+    }
+
     .desktop-navbar {
         display: none;
     }
@@ -217,7 +202,7 @@ section {
     }
 }
 
-@container page-header (width >= 768px) {
+@media (min-width: 769px) {
     .desktop-navbar {
         display: block;
     }
